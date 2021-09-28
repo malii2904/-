@@ -1,11 +1,20 @@
-﻿// лаб2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Задание1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    int a = sizeof(int);
+    short b = sizeof(short);
+    long c = sizeof(long);
+    char d = sizeof(char);
+    float e = sizeof(float);
+    double f = sizeof(double);
+
+
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

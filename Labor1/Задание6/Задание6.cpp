@@ -1,11 +1,21 @@
-﻿// собака.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Задание6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int numberofyears = 10000;
+
+    int sec_in_day = 24 * 60 * 60;
+
+    long long sec_in_cur_year = sec_in_day * 365;
+
+    long long sec_in_number_years = sec_in_cur_year * numberofyears + sec_in_day * (numberofyears / 4);
+
+    long long sec_in_100_years = sec_in_cur_year * 100 + 25 * sec_in_day;
+
+    long long sec_in_1000_years = sec_in_100_years * 10 + 250 * sec_in_day;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
