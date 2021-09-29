@@ -6,11 +6,11 @@ using namespace std;
 
 int main()
 {
-    int a = 5 ;
+    int a = 5;
     int b = 3;
-    int a = a + b;
-    int b = a - b;
-    int a = a - b;
+     a = a + b;
+     b = a - b;
+     a = a - b;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

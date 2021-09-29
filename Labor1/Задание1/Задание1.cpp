@@ -8,11 +8,11 @@ int main()
 {
 
     int a = sizeof(int);
-    short b = sizeof(short);
-    long c = sizeof(long);
-    char d = sizeof(char);
-    float e = sizeof(float);
-    double f = sizeof(double);
+    int b = sizeof(short);
+   int c = sizeof(long);
+   int d = sizeof(char);
+    int e = sizeof(float);
+   int f = sizeof(double);
 
 
 
