@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	int a = pow(3, 2);
+	int a = 2*2;
 	int b = a * a * a * a;
 }
 
