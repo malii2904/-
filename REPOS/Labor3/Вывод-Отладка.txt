@@ -1,0 +1,20 @@
+﻿"Labor3.exe" (Win32). Загружено "C:\Users\Lenovo\source\repos\Labor3\Debug\Labor3.exe". Символы загружены.
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\ntdll.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". 
+"Labor3.exe" (Win32). Выгружено "C:\Windows\SysWOW64\kernel32.dll"
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\KernelBase.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\vcruntime140d.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbased.dll". 
+Поток 0x2614 завершился с кодом 0 (0x0).
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel.appcore.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcrt.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\rpcrt4.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\sspicli.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\cryptbase.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\bcryptprimitives.dll". 
+"Labor3.exe" (Win32). Загружено "C:\Windows\SysWOW64\sechost.dll". 
+Поток 0x2204 завершился с кодом 0 (0x0).
+Поток 0x58c завершился с кодом 0 (0x0).
+Поток 0x5d0 завершился с кодом 0 (0x0).
+Программа "[11396] Labor3.exe" завершилась с кодом 0 (0x0).
