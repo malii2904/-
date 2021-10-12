@@ -10,20 +10,20 @@
 int main(void)
 {
 	setlocale(LC_ALL, "Rus");
-	char name1[6], name2[7], name3[5]; 
-	int cnt1=2, cnt2 , cnt3;
-	float tmch1=0.0 , tmch2 , tmch3 ;
-	float tmdy1 , tmdy2 , tmdy3 ;
+	char name1[6] = "OCEAN", name2[7] = "DEFYSM", name3[5] = "TRFD";
+	int cnt1 = 1917, cnt2 = 3386, cnt3 = 417;
+	float tmch1 = 8.70, tmch2 = 6.95, tmch3 = 1.05;
+	float tmdy1 = 18.2, tmdy2 = 22, tmdy3 = 2.98;
 
-	printf("1. Введите: название программы, количество строк кода,время исп. на SGI Callenge (cек), время исп. на SGI Indy (cек)>");
-	 scanf("%s %d %f %f", name1, &cnt1, &tmch1, &tmdy1);
+	//printf("1. Введите: название программы, количество строк кода,время исп. на SGI Callenge (cек), время исп. на SGI Indy (cек)>");
+	 //scanf("%s %d %f %f", name1, &cnt1, &tmch1, &tmdy1);
 	
 
-	printf("2. Введите: название программы, количество строк кода,время исп. на SGI Callenge (cек),время исп. на SGI Indy (cек)>");
-	scanf("%s %d %f %f", name2,  &cnt2, &tmch2, &tmdy2);
+	//printf("2. Введите: название программы, количество строк кода,время исп. на SGI Callenge (cек),время исп. на SGI Indy (cек)>");
+	//scanf("%s %d %f %f", name2,  &cnt2, &tmch2, &tmdy2);
 	
-	printf("3. Введите: название программы, количество строк кода,время исп. на SGI Callenge (cек),время исп. на SGI Indy (cек)>");
-	scanf("%s %d %f %f", name3,  &cnt3, &tmch3, &tmdy3);
+	//printf("3. Введите: название программы, количество строк кода,время исп. на SGI Callenge (cек),время исп. на SGI Indy (cек)>");
+	//scanf("%s %d %f %f", name3,  &cnt3, &tmch3, &tmdy3);
 	
 	printf("---------------------------------------------------------------|\n");
 	printf("|Время выполнения некоторых программ, которые применяют паралле|\n");
