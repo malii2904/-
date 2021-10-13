@@ -17,7 +17,7 @@ int main(void)
 	double ax;
 
 	printf("Введите x >");
-	scanf("%lf %lf", &x);
+	scanf("%lf ", &x);
 
 	ax = (a * x * 3.14) / 180;
 
