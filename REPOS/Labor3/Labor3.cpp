@@ -9,15 +9,15 @@
 int main(void)
 {
 	setlocale(LC_ALL, "Rus");
-	double x, y;
+	double x ;
 	double n = 9;
 	double a = 4.8;
 	double t1;
 	double t2;
 	double ax;
 
-	printf("Введите x, y>");
-	scanf("%lf %lf", &x, &y);
+	printf("Введите x >");
+	scanf("%lf %lf", &x);
 
 	ax = (a * x * 3.14) / 180;
 
