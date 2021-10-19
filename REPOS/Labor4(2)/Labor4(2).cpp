@@ -1,4 +1,4 @@
-﻿// Labor4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Labor4(2).cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <stdio.h>
@@ -7,31 +7,26 @@
 #include <stdlib.h>
 
 
- int main(void)
+int main(void)
 {
-	 setlocale(LC_ALL, "RUS"); 
-   short s;
-   short m;
-   short h;
-   unsigned short REZ;
+    setlocale(LC_ALL, "RUS");
+    short s;
+    short m;
+    short h;
+    unsigned short REZ;
+    
+    printf("Введите слово состояние устройства\n");
+    printf("(16-ричное число от 0 до 0xFFFF)>");
+    scanf_s("% hd", &REZ);
 
-   printf("Введите секунды(0-31)>");
-   scanf_s("%hd",&s);
+    s = (REZ >> 11) & 0x1f;
+    m = (REZ >> 5) & 0x3f;
+    h = REZ & 0x1f;
 
-   printf("Введите минуты(0-63)>");
-   scanf_s("%hd",&m);
-
-   printf("Введите часы(0-31)>");
-   scanf_s("%hd",&h);
-
-   REZ = ((short) s & 0x1F) << 11;
-   REZ |= ((short) m & 0x3F) << 5;
-   REZ |= (( short) h  & 0x1F) << 0;
-   printf("\n Слово состояние устройства = %04x\n", REZ);
-   ////////////////////////////////////////////////
    
-  
-
+    printf("Секунды=&hd\n", &s);
+    printf("Минуты=&hd\n", &m);
+    printf("Часы=&hd\n", &h);
 
 }
 
