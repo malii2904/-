@@ -13,20 +13,20 @@ int main(void)
     short s;
     short m;
     short h;
-    unsigned short REZ;
+    int REZ;
     
     printf("Введите слово состояние устройства\n");
     printf("(16-ричное число от 0 до 0xFFFF)>");
-    scanf_s("% hd", &REZ);
+    scanf_s("%x", &REZ);
 
     s = (REZ >> 11) & 0x1f;
     m = (REZ >> 5) & 0x3f;
     h = REZ & 0x1f;
 
    
-    printf("Секунды=&hd\n", &s);
-    printf("Минуты=&hd\n", &m);
-    printf("Часы=&hd\n", &h);
+    printf("Секунды=%hd\n", s);
+    printf("Минуты=%hd\n", m);
+    printf("Часы=%hd\n", h);
 
 }
 
