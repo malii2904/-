@@ -1,32 +1,30 @@
-﻿// Labor4(2).cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Labor5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <stdio.h>
 #include <iostream>
-#pragma warning (disable : 4996)
-#include <stdlib.h>
-
+#include <stdio.h>
+#pragma warning (disable:4996)
 
 int main(void)
 {
-    setlocale(LC_ALL, "RUS");
-    short s;
-    short m;
-    short h;
-    unsigned short REZ;
-    
-    printf("Введите слово состояние устройства\n");
-    printf("(16-ричное число от 0 до 0xFFFF)>");
-    scanf_s("% hd", &REZ);
+    setlocale(LC_ALL, "Rus");
+    double x, y;
+    printf("Введите координату x >");
+    scanf("%lf", &x);
+    printf("Введите координату y >");
+    scanf("%lf", &y);
+    printf("x=%6.3lf;  y=%6.3lf\n", x, y);
 
-    s = (REZ >> 11) & 0x1f;
-    m = (REZ >> 5) & 0x3f;
-    h = REZ & 0x1f;
+    if ((y > x * x - 1))
+    {
+        (0 >= x <= 0) && (y <= 1) && (y >= 1);
+        printf("Точка попадает в область\n");
+    }
 
-   
-    printf("Секунды=&hd\n", &s);
-    printf("Минуты=&hd\n", &m);
-    printf("Часы=&hd\n", &h);
+    else
+        printf("Точка не попадает в область\n");
+
+    return 0;
 
 }
 
