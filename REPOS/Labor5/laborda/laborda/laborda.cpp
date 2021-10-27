@@ -1,33 +1,36 @@
-﻿#include <iostream>
-#include <math.h>
-#include <windows.h>
+﻿#include <math.h> 
+#include <iostream> 
+#include <Windows.h> 
 #pragma warning(disable : 4996)
 
-int main(void) {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-    int a;
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    int k;
     while (1)
     {
-        printf("Введите значения a = ");
-        scanf("%d", &a);
+        printf("Введите значения k = ");
+        scanf("%d", &k);
 
-        if (a % 10 == 1)
-            printf("У меня"" %d ""гриб\n", a);
 
+        if ((k % 100 >= 11) && (19 >= k % 100))
+            printf("У меня"" %d ""грибов\n", k);
         else
-            if ((a % 10 >= 5) && (19 >= a % 10))
-                printf("У меня"" %d ""грибов\n", a);
+            if ((k % 10 >= 5) && (9 >= k % 10))
+                printf("У меня"" %d ""грибa\n", k);
             else
-                if ((a % 10 >= 2) && (4 >= a % 10))
-                    printf("У меня"" %d ""грибa\n", a);
+                if ((k % 10 >= 2) && (4 >= k % 10))
+                    printf("У меня"" %d ""грибa\n", k);
                 else
-                    if (a % 10 == 0)
-                        printf("У меня"" %d ""грибов\n", a);
-
+                    if (k % 10 == 0)
+                        printf("У меня"" %d ""грибов\n", k);
                     else
-                        printf("У меня"" %d ""грибов\n", a);
-        
+                        if (k % 10 == 1)
+                            printf("У меня"" %d ""гриб\n", k);
+
+                        else
+                            printf("У меня"" %d ""грибов\n", k);
     }
 
     return 0;
