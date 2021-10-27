@@ -1,0 +1,20 @@
+﻿"Labor5(a).exe" (Win32). Загружено "C:\Users\Lenovo\source\repos\Labor5(a)\Debug\Labor5(a).exe". Символы загружены.
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\ntdll.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". 
+"Labor5(a).exe" (Win32). Выгружено "C:\Windows\SysWOW64\kernel32.dll"
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\KernelBase.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\vcruntime140d.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbased.dll". 
+Поток 0x199c завершился с кодом 0 (0x0).
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel.appcore.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcrt.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\rpcrt4.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\sspicli.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\cryptbase.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\bcryptprimitives.dll". 
+"Labor5(a).exe" (Win32). Загружено "C:\Windows\SysWOW64\sechost.dll". 
+Поток 0x1148 завершился с кодом 0 (0x0).
+Поток 0x1dd0 завершился с кодом 0 (0x0).
+Поток 0x1c5c завершился с кодом 0 (0x0).
+Программа "[8784] Labor5(a).exe" завершилась с кодом 0 (0x0).
