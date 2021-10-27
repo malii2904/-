@@ -1,4 +1,9 @@
-﻿int main(void) {
+﻿#include <iostream>
+#include <math.h>
+#include <windows.h>
+#pragma warning(disable : 4996)
+
+int main(void) {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     int a;
@@ -22,7 +27,7 @@
 
                     else
                         printf("У меня"" %d ""грибов\n", a);
-        
+
     }
 
     return 0;
