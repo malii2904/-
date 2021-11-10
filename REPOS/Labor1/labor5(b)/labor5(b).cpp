@@ -31,7 +31,7 @@ int main()
            printf("У меня"" %d ""грибов\n", k);
 
                        
-                            
+                             
     }
 
     return 0;
