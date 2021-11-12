@@ -2,10 +2,35 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+   /*short x = 381, dec, ed, hundr;
+    hundr = x / 100;
+    dec = x % 100 / 10;
+    ed = x % 10;
+    x = hundr*100 + dec * 10 + ed ;
+    cout << hundr << endl << dec << endl << ed << endl;
+    */ 
+    int num = 1;
+    int number;
+    int total = 0;
+
+    while (num <= 5) 
+    {
+        cin >> number;
+        total += number;
+        num++;
+    }
+    cout << total << endl;
+
+
+
+    
+    
+    
+    
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
