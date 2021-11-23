@@ -41,16 +41,7 @@ int main()
 
 
 
-   /*for (int i = 0; i < 100 / 2; i++) {
-        a = mass[i];
-        mass[i] = mass[N - i - 1];
-        mass[N - i - 1] = a;
-    }*/
-
-
-
-
-       
+   
        
        
 
