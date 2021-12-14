@@ -13,7 +13,7 @@ int main()
     cout << "Начальный массив:" << endl;
     for (int i = 0; i < 100; i++) {
         mass[i] = rand() % 100 - 50;
-        cout << setw(5) << mass[i] << " ";
+        cout  << mass[i] ;
     }
     k = t = 0;
     for (int i = t; i < 100 + 1; i++) {
