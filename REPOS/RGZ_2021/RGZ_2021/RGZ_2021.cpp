@@ -1,7 +1,7 @@
 ﻿#include <iomanip>
 #include <iostream>
 #include <chrono>
-////#include<ctime>
+#include<ctime>
 using namespace std;
 
 
@@ -30,30 +30,34 @@ int main()
     const int size = 25;
     const int amount= 100;
     int array[size];
+    int array_2[size];
+    double sum = 0;
     cout << "Наш неупорядоченный массив:" << endl;;
     for (int i = 0; i < size; i++) {
         array[i] = rand() % 30;
         cout << setw(3) << array[i] << " ";
+        array_2[i] = array[i];
     }
     cout << endl << endl;;
     double avg = 0;
     double duration_arr[amount];
+    
     cout << "Сортировка  массива №1:" << endl;
-    for (int i = 0; i < amount; i++) {
+    for (int i= 0; i < amount; i++) {
+        for (int j = 0; j < size; j++) {
+            array[j] = array_2[j];
+        }
         auto start = std::chrono::high_resolution_clock::now();
         Shuttle_Sort_1(array, size);
         auto end = std::chrono::high_resolution_clock::now();
         chrono::duration<double>duration = end - start;
         duration_arr[i] = duration.count();
-        /*cout << "Сортировка неупорядоченного массива:" << endl;
-        for (int q = 0; q < size; q++) {
-            cout << setw(3) << array[q] << " ";
-        }
-        cout << endl;*/
         printf("Программа длится в течении: %.10lf\n", duration.count());
-        avg += duration_arr[i];
+        sum += duration.count();
+        avg = sum / amount;
      }
-    printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
+    printf("Среднее время: = %.10lf\n", avg);
+    
     cout << "Массив-результат после сортировки:" << endl;
     for (int q = 0; q < size; q++) {
         cout << setw(3) << array[q] << " ";
@@ -80,20 +84,19 @@ int main()
     cout << endl << endl << endl;
     cout << "Сортировка  массива №2:" << endl;
     for (int i = 0; i < amount; i++) {
+        for (int j = 0; j < size; j++) {
+            array[j] = array_2[j];
+        }
        auto start = std::chrono::high_resolution_clock::now();
        Shuttle_Sort_1(array, size);
        auto end = std::chrono::high_resolution_clock::now();
        chrono::duration<double>duration = end - start;
        duration_arr[i] = duration.count();
-       /*cout << "Сортировка неупорядоченного массива по убыванию:" << endl;
-       for (int q = 0; q < size; q++) {
-    //        cout << setw(3) << array[q] << " ";
-    //    }
-    //    cout << endl;*/
        printf("Программа длится в течении: %.10lf\n", duration.count());
-       avg += duration_arr[i];
+       sum += duration.count();
+       avg = sum / amount;
     }
-    printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
+    printf("Среднее время = %.10lf\n", avg );
     cout << "Массив-результат:" << endl;
     for (int q = 0; q < size; q++) {
         cout << setw(3) << array[q] << " ";
@@ -107,20 +110,17 @@ int main()
     cout << endl << endl << endl;;
         cout << "Сортировка массива №3:" << endl;
         for (int i = 0; i < amount; i++) {
+
             auto start = std::chrono::high_resolution_clock::now();
             Shuttle_Sort_1(array, size);
             auto end = std::chrono::high_resolution_clock::now();
             chrono::duration<double>duration = end - start;
             duration_arr[i] = duration.count();
-            /*cout << "Сортировка неупорядоченного массива:" << endl;
-            for (int q = 0; q < size; q++) {
-                cout << setw(3) << array[q] << " ";
-            }
-            cout << endl;*/
             printf("Программа длится в течении: %.10lf\n", duration.count());
-            avg += duration_arr[i];
+            sum += duration.count();
+            avg = sum / amount;
         }
-        printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
+        printf("Среднее время = %.10lf\n", avg);
       
     
     cout << "Массив-результат после сортировки:" << endl;

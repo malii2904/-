@@ -23,16 +23,21 @@ int main()
     const int size = 25;
     const int amount = 100;
     int array[size];
+    int array_2[size];
     cout << "Наш неупорядоченный массив:" << endl;;
     for (int i = 0; i < size; i++) {
         array[i] = rand() % 30;
         cout << setw(3) << array[i] << " ";
+        array_2[i] = array[i];
     }
     cout << endl;
     double avg = 0;
     double duration_arr[amount];
     cout << "Сортировка  массива №1:" << endl;
     for (int i = 0; i < amount; i++) {
+        for (int j = 0; j < size; j++) {
+            array[j] = array_2[j];
+        }
         auto start = std::chrono::high_resolution_clock::now();
         Sorts_by_insert(array, size);
         auto end = std::chrono::high_resolution_clock::now();
@@ -70,6 +75,9 @@ int main()
     cout << endl;
     cout << "Сортировка  массива №2:" << endl;
     for (int i = 0; i < amount; i++) {
+        for (int j = 0; j < size; j++) {
+            array[j] = array_2[j];
+        }
         auto start = std::chrono::high_resolution_clock::now();
         Sorts_by_insert(array, size);
         auto end = std::chrono::high_resolution_clock::now();
