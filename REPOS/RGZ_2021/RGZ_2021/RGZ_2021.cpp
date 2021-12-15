@@ -1,7 +1,7 @@
 ﻿#include <iomanip>
 #include <iostream>
 #include <chrono>
-#include<ctime>
+////#include<ctime>
 using namespace std;
 
 
@@ -36,7 +36,7 @@ int main()
         cout << setw(3) << array[i] << " ";
     }
     cout << endl << endl;;
-    double avg, sum = 0;
+    double avg = 0;
     double duration_arr[amount];
     cout << "Сортировка  массива №1:" << endl;
     for (int i = 0; i < amount; i++) {
@@ -51,10 +51,9 @@ int main()
         }
         cout << endl;*/
         printf("Программа длится в течении: %.10lf\n", duration.count());
-        sum += duration_arr[i];
+        avg += duration_arr[i];
      }
-    avg = sum / amount;
-    printf(" Время программы: %.10lf\n\n\n\n", avg);
+    printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
     cout << "Массив-результат после сортировки:" << endl;
     for (int q = 0; q < size; q++) {
         cout << setw(3) << array[q] << " ";
@@ -92,10 +91,9 @@ int main()
     //    }
     //    cout << endl;*/
        printf("Программа длится в течении: %.10lf\n", duration.count());
-     sum += duration_arr[i];
+       avg += duration_arr[i];
     }
-    avg = sum / amount;
-    printf(" Время программы: %.10lf\n\n", avg);
+    printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
     cout << "Массив-результат:" << endl;
     for (int q = 0; q < size; q++) {
         cout << setw(3) << array[q] << " ";
@@ -120,10 +118,10 @@ int main()
             }
             cout << endl;*/
             printf("Программа длится в течении: %.10lf\n", duration.count());
-            sum += duration_arr[i];
+            avg += duration_arr[i];
         }
-        avg = sum / amount;
-        printf(" Время программы: %.10lf\n\n\n\n", avg);
+        printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
+      
     
     cout << "Массив-результат после сортировки:" << endl;
     for (int q = 0; q < size; q++) {
