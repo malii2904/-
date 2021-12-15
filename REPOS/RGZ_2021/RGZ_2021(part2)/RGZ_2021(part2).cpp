@@ -32,6 +32,7 @@ int main()
     }
     cout << endl;
     double avg = 0;
+    double sum = 0;
     double duration_arr[amount];
     cout << "Сортировка  массива №1:" << endl;
     for (int i = 0; i < amount; i++) {
@@ -49,10 +50,11 @@ int main()
         }
         cout << endl;*/
         printf("Программа длится в течении: %.10lf\n", duration.count());
-        avg += duration_arr[i];
+        sum += duration.count();
+        avg = sum / amount;
     }
     
-    printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
+    printf("Среднее время: = %.10lf\n", avg);
     cout << "Массив-результат после сортировки:" << endl;
     for (int q = 0; q < size; q++) {
         cout << setw(3) << array[q] << " ";
@@ -89,9 +91,10 @@ int main()
      //    }
      //    cout << endl;*/
         printf("Программа длится в течении: %.10lf\n", duration.count());
-        avg += duration_arr[i];
+        sum += duration.count();
+        avg = sum / amount;
     }
-    printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
+    printf("Среднее время: = %.10lf\n", avg);
     cout << "Массив-результат:" << endl;
     for (int q = 0; q < size; q++) {
         cout << setw(3) << array[q] << " ";
@@ -116,9 +119,10 @@ int main()
         }
         cout << endl;*/
         printf("Программа длится в течении: %.10lf\n", duration.count());
-        avg += duration_arr[i];
+        sum += duration.count();
+        avg = sum / amount;
     }
-    printf("Продолжительность программы = %.10lf\n", avg / (amount - 1));
+    printf("Среднее время: = %.10lf\n", avg);
 
     cout << "Массив-результат после сортировки:" << endl;
     for (int q = 0; q < size; q++) {
