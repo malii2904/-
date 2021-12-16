@@ -20,7 +20,7 @@ int main()
 {
     setlocale(LC_ALL, "Rus");
     srand(time(NULL));
-    const int size = 45;
+    const int size = 5;
     const int amount = 100;
     int array[size];
     int array_2[size];
@@ -44,12 +44,7 @@ int main()
         auto end = std::chrono::high_resolution_clock::now();
         chrono::duration<double>duration = end - start;
         duration_arr[i] = duration.count();
-        /*cout << "Сортировка неупорядоченного массива:" << endl;
-        for (int q = 0; q < size; q++) {
-            cout << setw(3) << array[q] << " ";
-        }
-        cout << endl;*/
-       // printf("Программа длится в течении: %.10lf\n", duration.count());
+        printf("Программа длится в течении: %.10lf\n", duration.count());
         sum += duration.count();
         avg = sum / amount;
     }
@@ -60,75 +55,65 @@ int main()
         cout << setw(3) << array[q] << " ";
     }
     cout << endl << endl << endl << endl;
-    //cout << "Массив по убыванию:" << endl;
-    //int ok, i;
-    //for (int j = 1; j < size; ++j) {
-    //    ok = array[j];
-    //    i = j - 1;
-    //    while (array[i] <= ok && i >= 0) {
-    //        array[i + 1] = array[i];
-    //        --i;
-    //    }
-    //    array[i + 1] = ok;
-    //}
-    //for (int q = 0; q < size; q++) {
-    //    cout << setw(3) << array[q] << " ";
-    //}
-    //cout << endl;
-    //cout << "Сортировка  массива вставками  №2:" << endl;
-    //for (int i = 0; i < amount; i++) {
-    //    for (int j = 0; j < size; j++) {
-    //        array[j] = array_2[j];
-    //    }
-    //    auto start = std::chrono::high_resolution_clock::now();
-    //    Sorts_by_insert(array, size);
-    //    auto end = std::chrono::high_resolution_clock::now();
-    //    chrono::duration<double>duration = end - start;
-    //    duration_arr[i] = duration.count();
-    //    /*cout << "Сортировка неупорядоченного массива по убыванию:" << endl;
-    //    for (int q = 0; q < size; q++) {
-    // //        cout << setw(3) << array[q] << " ";
-    // //    }
-    // //    cout << endl;*/
-    //    printf("Программа длится в течении: %.10lf\n", duration.count());
-    //    sum += duration.count();
-    //    avg = sum / amount;
-    //}
-    //printf("Среднее время: = %.10lf\n", avg);
-    //cout << "Массив-результат:" << endl;
-    //for (int q = 0; q < size; q++) {
-    //    cout << setw(3) << array[q] << " ";
-    //}
-    //cout << endl;
-    //cout << "Сортированный массив:" << endl;
-    //for (int q = 0; q < size; q++) {
-    //    Sorts_by_insert(array, size);
-    //    cout << setw(3) << array[q] << " ";
-    //}
-    //cout << endl;
-    //cout << "Сортировка массива №3:" << endl;
-    //for (int i = 0; i < amount; i++) {
-    //    auto start = std::chrono::high_resolution_clock::now();
-    //    Sorts_by_insert(array, size);
-    //    auto end = std::chrono::high_resolution_clock::now();
-    //    chrono::duration<double>duration = end - start;
-    //    duration_arr[i] = duration.count();
-    //    /*cout << "Сортировка неупорядоченного массива:" << endl;
-    //    for (int q = 0; q < size; q++) {
-    //        cout << setw(3) << array[q] << " ";
-    //    }
-    //    cout << endl;*/
-    //    printf("Программа длится в течении: %.10lf\n", duration.count());
-    //    sum += duration.count();
-    //    avg = sum / amount;
-    //}
-    //printf("Среднее время: = %.10lf\n", avg);
+    cout << "Массив по убыванию:" << endl;
+    int ok, i;
+    for (int j = 1; j < size; ++j) {
+        ok = array[j];
+        i = j - 1;
+       while (array[i] <= ok && i >= 0) {
+           array[i + 1] = array[i];
+            --i;
+       }
+       array[i + 1] = ok;
+    }
+    for (int q = 0; q < size; q++) {
+        cout << setw(3) << array[q] << " ";
+    }
+    cout << endl;
+    cout << "Сортировка  массива вставками  №2:" << endl;
+    for (int i = 0; i < amount; i++) {
+        for (int j = 0; j < size; j++) {
+            array[j] = array_2[j];
+        }
+       auto start = std::chrono::high_resolution_clock::now();
+        Sorts_by_insert(array, size);
+        auto end = std::chrono::high_resolution_clock::now();
+        chrono::duration<double>duration = end - start;
+        duration_arr[i] = duration.count();
+      printf("Программа длится в течении: %.10lf\n", duration.count());
+       sum += duration.count();
+       avg = sum / amount;
+    }
+    printf("Среднее время: = %.10lf\n", avg);
+    cout << "Массив-результат:" << endl;
+    for (int q = 0; q < size; q++) {
+       cout << setw(3) << array[q] << " ";
+    }
+    cout << endl;
+    cout << "Сортированный массив:" << endl;
+    for (int q = 0; q < size; q++) {
+        Sorts_by_insert(array, size);
+        cout << setw(3) << array[q] << " ";
+    }
+    cout << endl;
+    cout << "Сортировка массива №3:" << endl;
+    for (int i = 0; i < amount; i++) {
+       auto start = std::chrono::high_resolution_clock::now();
+        Sorts_by_insert(array, size);
+       auto end = std::chrono::high_resolution_clock::now();
+        chrono::duration<double>duration = end - start;
+       duration_arr[i] = duration.count();
+       printf("Программа длится в течении: %.10lf\n", duration.count());
+       sum += duration.count();
+       avg = sum / amount;
+    }
+    printf("Среднее время: = %.10lf\n", avg);
 
-    //cout << "Массив-результат после сортировки:" << endl;
-    //for (int q = 0; q < size; q++) {
-    //    cout << setw(3) << array[q] << " ";
-    //}
-    //return 0;
+    cout << "Массив-результат после сортировки:" << endl;
+    for (int q = 0; q < size; q++) {
+       cout << setw(3) << array[q] << " ";
+    }
+    return 0;
 }
 
 
