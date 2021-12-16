@@ -12,7 +12,7 @@ void print_arr(int arr[], const int size) {
 
 int main()
 {
-    
+    x;
 }
 
  
