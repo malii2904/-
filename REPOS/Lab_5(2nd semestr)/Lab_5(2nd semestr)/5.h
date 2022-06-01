@@ -1,10 +1,14 @@
 #pragma once
+
+#include <stdio.h>
 #include <iostream>
-#include <ctime>
-#include <algorithm>
-#include <numeric>
+#include <cstdlib>
+#include <iomanip>
+#include <time.h> 
+#define OprArr
+
 using namespace std;
 
-void printARR(int const N, int* parr);
-void newarr(int* ptodelete, int* p2arr, int const N, int* parr);
-int SUM(int index_min, int index_max, int* parr);
+void ZErkmatrix(int rows, int cols, int** arr);
+
+void OdnomerkakDvumer(int rows, int cols, int* arr);

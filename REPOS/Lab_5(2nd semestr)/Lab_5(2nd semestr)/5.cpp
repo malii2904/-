@@ -1,39 +1,27 @@
 #include"5.h"
 
-void printARR(int const N, int* parr) {
-    cout << "Array:" << "\n";
-    for (int i = 0; i < N; i++) {
-        int RAND = rand() % 50 - 10;
+void ZErkmatrix(int rows, int cols, int** arr) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
 
-        *(parr + i) = RAND;
-        cout << *(parr + i) << "  ";
-
+            if (j < cols / 2) {
+                *(*(arr + i) + j) = *(*(arr + i) + cols - j - 1);      // arr[i][j] = arr[i][cols - j - 1]
+            }
+            cout << *(*(arr + i) + j) << '\t';
+        }
+        cout << '\n';
     }
 }
-void newarr(int* ptodelete, int* p2arr, int const N, int* parr) {
-    for (int i = 0, j = 0; i < N; i++, j++)
-    {
-        if (i != *(ptodelete + i))
 
-            *(p2arr + j) = *(parr + i);
-        else
-            j--;
+void OdnomerkakDvumer(int rows, int cols, int* arr) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
 
+            if (j < cols / 2) {
+                *(arr + i * cols + j) = *(arr + i * cols + cols - j - 1);
+            }
+            cout << *(arr + i * cols + j) << '\t';
+        }
+        cout << '\n';
     }
-
-}
-int SUM(int index_min, int index_max, int* parr) {
-    int sum = 0;
-
-    if (index_min < index_max)
-        for (int i = index_min + 1; i < index_max; i++) {
-
-            sum = sum + *(parr + i);
-        }
-    if (index_min > index_max)
-        for (int i = index_max + 1; i < index_min; i++) {
-
-            sum = sum + *(parr + i);
-        }
-    return sum;
 }

@@ -1,67 +1,64 @@
 ﻿#include"5.h"
 
 int main()
-{           // name of arr its pointer on first el
+{
+    srand(time(0));
+    setlocale(LC_ALL, "ru");
+    int rows, cols;
+    cout << "Введите кол-во строк: ";
+    cin >> rows;
+    cout << "Введите кол-во столбцов: ";
+    cin >> cols;
 
-    srand(time(NULL));
+#ifdef OprArr
 
-    int N;
-    cout << "Enter array size:";
-    cin >> N;
-    int* arr = new int[N];
-    int* todelete = new int[N];
-    int* array = new int[N];
+    int* arr = new int[rows * cols];
 
-    srand(time(NULL));
-    int d = 0;
-    int* parr = arr;
-    int* p2arr = array;
+    cout << "Начальная матрица" << '\n';
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
 
-    int* ptodelete = todelete;
-
-    int index_min = 0;
-    int index_max = 0;
-    printARR(N, parr);
-    cout << "\n";
-    int max = *parr;
-    int min = *parr;
-
-    for (int i = 0; i < N; i++)
-    {
-        if (*(parr + i) <= min) {
-            min = *(parr + i);
-            index_min = i;
-
+            *(arr + i * cols + j) = rand() % 50;    //*(*(arr + i) + j)    arr[i][j]
+            cout << *(arr + i * cols + j) << '\t';
         }
-        if (*(arr + i) >= max) {
-            max = *(parr + i);
-            index_max = i;
-        }
+        cout << endl;
     }
 
-    cout << "\n" << "INdex_Max=>" << index_max << endl;
-    cout << "\n" << "INDEX_min=>" << index_min << endl;
     cout << endl;
-    cout << "\n" << "Max=>" << max << endl;
-    cout << "\n" << "min=>" << min << "\n" << endl;
-    cout << "Sum of elements between the min and max:" << SUM(index_min, index_max, parr) << "\n" << endl;
-    for (int i = 0; i < N; i++) {
-        if (min == *(arr + i)) {
+    cout << "Зеркальная матрица" << '\n';
 
-            d++;
+    OdnomerkakDvumer(rows, cols, arr);
 
-            *(todelete + i) = i;
+    delete[]arr;
 
-        }
-    }
-    newarr(todelete, p2arr, N, parr);
-
-    cout << "NEW ARRAY:\n";
-    for (int i = 0; i < N - d; i++)
+#else
+    int** arr = new int* [rows];
+    for (int i = 0; i < rows; i++)
     {
-        cout << *(p2arr + i) << "  ";
+        arr[i] = new int[cols];
+    }
+
+    cout << "Начальная матрица" << '\n';
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            *(*(arr + i) + j) = rand() % 30;    //*(*(arr + i) + j)    arr[i][j]
+            cout << *(*(arr + i) + j) << '\t';
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+    cout << "Зеркальная матрица" << '\n';
+
+    ZErkmatrix(rows, cols, arr);
+    for (int i = 0; i < rows; i++)
+    {
+        delete[] arr[i];
     }
     delete[] arr;
-    delete[] array;
-    delete[]  todelete;
+
+#endif
+
 }
+
+
